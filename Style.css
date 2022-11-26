@@ -4,37 +4,37 @@
 }
 #Main-Part {
     margin: 75px auto;
-    width: 450px;
-    height: 880px;
-    border-radius: 30px;
+    width: 240px;
+    height: 450px;
+    border-radius: 13px;
     background-color: #E7EBF0;
 }
 
 .divider {
     width: 100%;
-    height: 20px;
-    margin-top: 50px;
+    height: 9px;
+    margin-top: 23px;
     background: linear-gradient(#B8B8B8, #E7EBF0, #FFFFFF);
-    border-radius: 100px;
+    border-radius: 45px;
 }
 
 .fa-calculator {
-    font-size: 30px;
+    font-size: 13px;
     color: #7E99B9;
-    margin-left: 20px;
-    margin-top: 50px;
+    margin-left: 9px;
+    margin-top: 23px;
 }
 
 .fa-clock {
-    margin-left: 30px;
-    font-size: 30px;
-    margin-top: 30px;
+    margin-left: 13px;
+    font-size: 13px;
+    margin-top: 13px;
 }
 
 .toggle-btn {
-    width: 95px;
-    height: 45px;
-    margin-top: 45px;
+    width: 43px;
+    height: 20.5px;
+    margin-top: 20.5px;
     margin-left: auto;
     margin-right: auto;
     background: #C1D0E2;
@@ -44,120 +44,125 @@
 }
 
 .fa-moon {
-    font-size: 20px;
-    margin: 13px 20px;
+    position: absolute;
+    font-size: 9px;
+    margin: 6px 9px;
 }
 
 .fa-sun {
-    font-size: 20px;
-    margin-top: 13px;
+    position: absolute;
+    right: 6px;
+    font-size: 9px;
+    top: 6px;
     color: #39CBF9;
 }
 
 .circle {
     background-color: #FFFFFF;
-    width: 30px;
-    height: 30px;
+    width: 13px;
+    height: 13px;
     border-radius: 50%;
     display: inline-block;
     position: absolute;
-    top: 7px;
-    left: 55px;
+    top: 3.2px;
+    left: 25px;
 }
 
 .middle-part {
-    margin-bottom: 60px;
+    margin-bottom: 27px;
 }
 
 .cal-box {
     float: right;
     display: block;
-    margin: 40px 50px 10px auto;
-    font-size: 40px;
+    margin: 18px 23px 4.5px auto;
+    font-size: 18px;
     color: #C1D0E2;
 }
 
 .Equal {
-    font-size: 45px;
-    margin-left: 40px;
+    font-size: 20.5px;
+    margin-left: 18px;
 }
 
 .result {
-    font-size: 50px;
+    font-size: 23px;
     float: right;
-    margin-right: 60px;
+    margin-right: 27px;
 }
 
 .Hor-panel {
     box-shadow: inset 4px 4px 12px rgba(0, 0, 0, 0.45), inset -4px -4px 12px 5px rgba(236, 236, 236, 0.08);
     border-radius: 24px;
-    margin-left: 48px;
+    margin-left: 22px;
     width: 80%;
     display: flex;
     justify-content: space-evenly;
-    height: 60px;
+    height: 27px;
 }
 
 .holder {
-    margin-left: 10px;
-    margin-top: 15px;
+    margin-left: 4.5px;
+    margin-top: 6.8px;
 }
 
 .cal-btn {
-    font-size: 45px;
+    font-size: 20.5px;
     text-align: center;
     background: #E7EBF0;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.75), -4px -4px 12px 5px rgba(236, 236, 236, 0.08);
     border-radius: 100px;
     border: none;
-    width: 70px;
+    width: 31.8px;
 }
 
 .numbers {
     width: 85%;
-    margin-left: 30px !important;
-    margin-top: 20px !important;
+    margin-left: 9.5px !important;
+    margin-top: 9px !important;
 }
 
 .ver-bar {
-    width: 63px;
+    width: 28.7px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
-    height: 430px;
+    height: 191px;
     box-shadow: inset 4px 4px 12px rgba(0, 0, 0, 0.45), inset -4px -4px 12px 5px rgba(236, 236, 236, 0.08);
     border-radius: 24px;
     position: relative;
+    right: 10px;
+    top: 0;
 }
 
 .Hor-Item {
-    font-size: 35px;
+    font-size: 15.9px;
     font-weight: 600;
 }
 
 .var-Item {
-    font-size: 35px;
+    font-size: 15.9px;
     font-weight: 600;
     flex: 1 1 40px;
-    margin-top: 10px;
+    margin-top: 4.5px;
     z-index: 1;
 }
 
 .Move_left {
-    left: 10px;
+    left: 4.5px;
 }
 
 .Move_right {
-    left: 55px;
+    left: 25px;
 }
 .moving-circle{
     position: absolute;
     background: #E7EBF0;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.75), -4px -4px 12px rgba(236, 236, 236, 0.08);
     border-radius: 100px;
-    width: 40px;
-    height: 40px;
-    left: 11px;
-    top: 84.5%;
+    width: 18px;
+    height: 18px;
+    left: 5px;
+    top: 84%;
     z-index: 0;
 }
