@@ -117,15 +117,20 @@ for (let i = 0; i < Btns.length; i++) {
                     x--;
                 }
                 break;
-            case "=":
+            // case "=":
+            //     // let FinalResult = document.querySelector(".result");
+            //     // let Value = CalBox.innerHTML;
+            //     // Value = Value.replaceAll("÷", "/");
+            //     // Value = Value.replaceAll("×", "*");
+            //     // FinalResult.innerHTML = eval(Value);
+            //     break;
+            default:
+                CalBox.innerHTML += txt;
                 let FinalResult = document.querySelector(".result");
                 let Value = CalBox.innerHTML;
                 Value = Value.replaceAll("÷", "/");
                 Value = Value.replaceAll("×", "*");
                 FinalResult.innerHTML = eval(Value);
-                break;
-            default:
-                CalBox.innerHTML += txt;
         }
         if (CalBox.innerHTML === "×") {
             CalBox.innerHTML = "0×";
