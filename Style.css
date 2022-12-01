@@ -1,7 +1,8 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
+
 #Main-Part {
     margin: 75px auto;
     width: 240px;
@@ -138,14 +139,18 @@
 .Hor-Item {
     font-size: 15.9px;
     font-weight: 600;
+    border: none;
+    background-color: transparent;
 }
 
 .var-Item {
     font-size: 15.9px;
     font-weight: 600;
     flex: 1 1 40px;
-    margin-top: 4.5px;
+    margin-top: 6.5px !important;
     z-index: 1;
+    border: none;
+    background-color: transparent;
 }
 
 .Move_left {
@@ -155,14 +160,13 @@
 .Move_right {
     left: 25px;
 }
-.moving-circle{
-    position: absolute;
+
+.moving-circle {
     background: #E7EBF0;
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.75), -4px -4px 12px rgba(236, 236, 236, 0.08);
     border-radius: 100px;
-    width: 18px;
-    height: 18px;
-    left: 5px;
-    top: 84%;
-    z-index: 0;
+    margin: 2px;
+    height: 25px;
+    animation: pulse 3s ease infinite alternate,
+    nudge 5s linear infinite alternate;
 }
