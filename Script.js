@@ -3,6 +3,7 @@ moon.addEventListener("click", MoveLeft);
 let Circle = document.querySelector(".circle");
 let Mode = document.querySelector("#Main-Part");
 let Clock = document.querySelector(".fa-clock");
+let Calculator = document.querySelector(".fa-calculator");
 let divider = document.querySelector(".divider");
 let option = document.querySelectorAll(".option");
 let Cal_Btn = document.querySelectorAll(".cal-btn");
@@ -10,7 +11,7 @@ let Toggle_Btn = document.querySelector(".toggle-btn");
 let Cal_Box = document.querySelector(".cal-box");
 let Last = document.querySelectorAll(".last");
 let MovingCircle = document.querySelector(".moving-circle");
-let var_Item = document.querySelectorAll(".var-Item");
+// let var_Item = document.querySelectorAll(".var-Item");
 
 let buttons = document.querySelectorAll(".var-Item");
 for (let i = 0; i < buttons.length; i++) {
@@ -100,6 +101,8 @@ let CalBox = document.querySelector(".cal-box");
 let Btns = document.getElementsByTagName("button");
 for (let i = 0; i < Btns.length; i++) {
     Btns[i].addEventListener("click", function () {
+        let FinalResult = document.querySelector(".result");
+        let Value = CalBox.innerHTML;
         while (x < 1) {
             CalBox.innerHTML = "";
             x++;
@@ -117,13 +120,24 @@ for (let i = 0; i < Btns.length; i++) {
                     x--;
                 }
                 break;
-            // case "=":
+            case "=":
             //     // let FinalResult = document.querySelector(".result");
             //     // let Value = CalBox.innerHTML;
             //     // Value = Value.replaceAll("÷", "/");
             //     // Value = Value.replaceAll("×", "*");
             //     // FinalResult.innerHTML = eval(Value);
-            //     break;
+                let Finaly = document.querySelector(".result");
+                window.localStorage.setItem(CalBox.textContent, Finaly.textContent);
+                let Rec = document.createElement("p");
+                let Second_Rec = document.createElement("p");
+                Rec.classList.add("record");
+                Rec.innerHTML += CalBox.textContent;
+                let Record_Box = document.querySelector(".records");
+                Record_Box.appendChild(Rec);
+                Second_Rec.classList.add("second-record");
+                Second_Rec.innerHTML += Finaly.textContent;
+                Record_Box.appendChild(Second_Rec);
+                break;
             default:
                 CalBox.innerHTML += txt;
                 let FinalResult = document.querySelector(".result");
@@ -131,6 +145,15 @@ for (let i = 0; i < Btns.length; i++) {
                 Value = Value.replaceAll("÷", "/");
                 Value = Value.replaceAll("×", "*");
                 FinalResult.innerHTML = eval(Value);
+                if (FinalResult.textContent.length >= 12) {
+                    FinalResult.classList.remove("big-font");
+                    FinalResult.classList.add("small-font");
+                } else {
+                    FinalResult.classList.remove("small-font");
+                    FinalResult.classList.add("big-font");
+                }
+                console.log(FinalResult.textContent.length);
+                break;
         }
         if (CalBox.innerHTML === "×") {
             CalBox.innerHTML = "0×";
@@ -151,8 +174,31 @@ for (let i = 0; i < Btns.length; i++) {
         if (CalBox.innerHTML === "%") {
             CalBox.innerHTML = "0%";
         }
+        FinalResult = document.querySelector(".result");
+        if (CalBox.textContent.slice(-1) === "=") {
+            CalBox.innerHTML = FinalResult.textContent;
+            console.log(CalBox.textContent);
+            console.log(FinalResult.textContent);
+        }
 
     });
 
 
+
+
 }
+Clock.addEventListener("click", Open_Memory);
+
+function Open_Memory() {
+    let Memory = document.querySelector(".Memory");
+    Memory.style.display = "block";
+}
+
+Calculator.addEventListener("click", Close_Memory);
+
+function Close_Memory() {
+    let Memory = document.querySelector(".Memory");
+    Memory.style.display = "none";
+}
+
+console.log(CalBox.textContent[CalBox.textContent.length-1]);

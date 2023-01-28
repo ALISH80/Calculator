@@ -26,6 +26,7 @@
     height: 450px;
     border-radius: 13px;
     background-color: #E7EBF0;
+    position: relative;
 }
 
 .divider {
@@ -102,12 +103,14 @@
 
 .cal-box {
     float: right;
-    font-size: 18px;
+    font-size: 15px;
     padding-right: 10px;
     padding-left: 25px;
     color: #C1D0E2;
 }
-
+.last-part{
+    margin-top: 40px;
+}
 .Equal {
     font-size: 20.5px;
     margin-left: 18px;
@@ -116,9 +119,9 @@
 .result {
     font-size: 23px;
     float: right;
-    margin-right: 27px;
+    margin-right: 20px;
     width: 100%;
-    direction: rtl;
+    font-weight: 500;
 }
 
 .Hor-panel {
@@ -198,4 +201,38 @@
     height: 25px;
     animation: pulse 3s ease infinite alternate,
     nudge 5s linear infinite alternate;
+}
+.small-font{
+    font-size: 16px !important;
+}
+.big-font{
+    font-size: 23px !important;
+}
+.Memory{
+    width: 100%;
+    height: 63%;
+    display: none;
+    border-radius: 13px;
+    background-color: #C3D1E2;
+    position: absolute;
+    z-index: 22;
+    bottom: 0;
+    padding: 10px 25px;
+    font-size: 18px;
+    overflow-y: scroll;
+}
+.record{
+    font-size: 12px;
+    margin-bottom: 6px;
+    display: block;
+    color: #75889E;
+    width: 100%;
+}
+.second-record{
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: black;
+    display: block;
+    width: 100%;
+    /*padding-right: 10px;*/
 }
