@@ -233,6 +233,24 @@
     margin-bottom: 8px;
     color: black;
     display: block;
+    border-bottom: 1px solid #7E99B9;
+    padding-bottom: 10px;
     width: 100%;
     /*padding-right: 10px;*/
+}
+
+.Trash{
+    display: none !important;
+}
+
+.Empty{
+    text-align: center;
+    padding-top: 4rem;
+    display: block;
+}
+.Empty p{
+    font-size: 20px;
+}
+.Empty img{
+    width: 40px;
 }
