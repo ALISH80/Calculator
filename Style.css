@@ -194,7 +194,7 @@
 }
 
 .moving-circle {
-    background: #E7EBF0;
+    /*background-color: #E7EBF0;*/
     box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.75), -4px -4px 12px rgba(236, 236, 236, 0.08);
     border-radius: 100px;
     margin: 2px;

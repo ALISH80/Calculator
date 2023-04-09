@@ -1,5 +1,4 @@
-let moon = document.querySelector(".fa-moon");
-moon.addEventListener("click", MoveLeft);
+
 let Circle = document.querySelector(".circle");
 let Mode = document.querySelector("#Main-Part");
 let Clock = document.querySelector(".fa-clock");
@@ -14,6 +13,7 @@ let Memory = document.querySelector(".Memory");
 let Record = document.querySelector(".record");
 let Second_Record = document.querySelector(".second-record");
 let MovingCircle = document.querySelector(".moving-circle");
+let help;
 // let var_Item = document.querySelectorAll(".var-Item");
 
 let buttons = document.querySelectorAll(".var-Item");
@@ -21,6 +21,7 @@ for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function () {
         buttons[i].classList.add("moving-circle");
         buttons[i].style.background = "#E7EBF0";
+        help = i;
         for (let j = 0; j < buttons.length; j++) {
             if (j !== i) {
                 buttons[j].classList.remove("moving-circle");
@@ -29,13 +30,17 @@ for (let i = 0; i < buttons.length; i++) {
         }
     });
 }
+let moon = document.querySelector(".fa-moon");
+moon.addEventListener("click", MoveLeft);
 let flag = 0;
 function MoveLeft() {
     flag = 1;
+    let Check = document.querySelector(".ver-bar").children;
+    Check.item(help).style.backgroundColor="#2C2F34";
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function () {
-            buttons[i].style.background = "#2C2F34";
             buttons[i].classList.add("moving-circle");
+            buttons[i].style.background = "#2C2F34";
             for (let j = 0; j < buttons.length; j++) {
                 if (j !== i) {
                     buttons[j].classList.remove("moving-circle");
@@ -51,7 +56,6 @@ function MoveLeft() {
     divider.style.background = "linear-gradient(black, #2C2F34, #2C2F34)";
     Toggle_Btn.style.background = "#2C2F34";
     Cal_Box.style.color = "#C6C6C6";
-    MovingCircle.style.background = "#2C2F34";
     Memory.style.backgroundColor = "#697F86";
     Calculator.style.color = "#697F86";
     // Record.style.color = "#FFFFFF";
@@ -79,6 +83,8 @@ let sun = document.querySelector(".fa-sun");
 sun.addEventListener("click", MoveRight);
 function MoveRight() {
     flag = 0;
+    let Check = document.querySelector(".ver-bar").children;
+    Check.item(help).style.backgroundColor="#E7EbF0";
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].addEventListener("click", function () {
             buttons[i].classList.add("moving-circle");
@@ -101,7 +107,6 @@ function MoveRight() {
     Toggle_Btn.style.background = "#C1D0E2";
     Cal_Box.style.color = "#C1D0E2";
     Memory.style.backgroundColor = "#C3D1E2";
-    MovingCircle.style.background = "#E7EBF0";
     if (Memory.style.display === "block"){
         Calculator.style.color="#000000";
         Clock.style.color="#7E99B9"
